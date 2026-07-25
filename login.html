@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login | Smart Village Complaint Management System</title>
+
+    <link rel="stylesheet" href="css/login.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            <i class="fa-solid fa-house"></i>
+            <span>Smart Village Complaint Management System</span>
+        </div>
+
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="register.html">Register</a>
+        </div>
+
+    </nav>
+
+    <!-- ================= LOGIN CONTAINER ================= -->
+
+    <section class="container">
+
+        <div class="login-card">
+
+            <h1>Welcome Back</h1>
+
+            <p>Login to continue</p>
+
+            <!-- Tabs -->
+
+            <div class="tabs">
+
+                <button class="tab active" onclick="showVillager()">
+                    Villager
+                </button>
+
+                <button class="tab" onclick="showPanchayat()">
+                    Panchayat
+                </button>
+
+            </div>
+
+            <!-- ================= Villager Login ================= -->
+
+            <form id="villagerLogin">
+
+                <div class="input-box">
+
+                    <i class="fa-solid fa-phone"></i>
+
+                    <input
+                        type="tel"
+                        id="villagerPhone"
+                        placeholder="Phone Number"
+                        required>
+
+                </div>
+
+                <div class="input-box">
+
+                    <i class="fa-solid fa-lock"></i>
+
+                    <input
+                        type="password"
+                        id="villagerPassword"
+                        placeholder="Password"
+                        required>
+
+                </div>
+
+                <div class="options">
+
+                    <label>
+
+                        <input type="checkbox">
+
+                        Remember Me
+
+                    </label>
+
+                    <a href="#">Forgot Password?</a>
+
+                </div>
+
+                <button type="submit" class="login-btn">
+
+                    Login
+
+                </button>
+
+            </form>
+
+            <!-- ================= Panchayat Login ================= -->
+
+            <form id="panchayatLogin" style="display:none;">
+
+                <div class="input-box">
+
+                    <i class="fa-solid fa-envelope"></i>
+
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="Official Email"
+                        required>
+
+                </div>
+
+                <div class="input-box">
+
+                    <i class="fa-solid fa-lock"></i>
+
+                    <input
+                        type="password"
+                        id="panchayatPassword"
+                        placeholder="Password"
+                        required>
+
+                </div>
+
+                <div class="options">
+
+                    <label>
+
+                        <input type="checkbox">
+
+                        Remember Me
+
+                    </label>
+
+                    <a href="#">Forgot Password?</a>
+
+                </div>
+
+                <button type="submit" class="login-btn">
+
+                    Login
+
+                </button>
+
+            </form>
+
+            <div class="bottom-text">
+
+                Don't have an account?
+
+                <a href="register.html">
+
+                    Register
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <script src="js/login.js"></script>
+
+</body>
+
+</html>

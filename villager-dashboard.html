@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Villager Dashboard</title>
+
+    <link rel="stylesheet" href="css/dashboard.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- ================= SIDEBAR ================= -->
+
+<div class="sidebar">
+
+    <div class="logo">
+
+        <i class="fa-solid fa-house"></i>
+
+        <h2>Smart Village</h2>
+
+    </div>
+
+    <ul>
+
+        <li class="active">
+            <i class="fa-solid fa-gauge"></i>
+            Dashboard
+        </li>
+
+        <li>
+            <i class="fa-solid fa-circle-plus"></i>
+            Register Complaint
+        </li>
+
+        <li>
+            <i class="fa-solid fa-list"></i>
+            Complaint History
+        </li>
+
+        <li>
+            <i class="fa-solid fa-user"></i>
+            Profile
+        </li>
+
+        <li onclick="logout()">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            Logout
+        </li>
+
+    </ul>
+
+</div>
+
+<!-- ================= MAIN CONTENT ================= -->
+
+<div class="main">
+
+    <!-- Navbar -->
+
+    <div class="topbar">
+
+        <h1>Villager Dashboard</h1>
+
+        <div class="profile">
+
+            <i class="fa-solid fa-user-circle"></i>
+
+            <span id="username">Welcome</span>
+
+        </div>
+
+    </div>
+
+    <!-- Statistics -->
+
+    <div class="cards">
+
+        <div class="card blue">
+
+            <i class="fa-solid fa-file-circle-plus"></i>
+
+            <h2 id="totalComplaints">10</h2>
+
+            <p>Total Complaints</p>
+
+        </div>
+
+        <div class="card orange">
+
+            <i class="fa-solid fa-clock"></i>
+
+            <h2 id="pendingComplaints">4</h2>
+
+            <p>Pending</p>
+
+        </div>
+
+        <div class="card green">
+
+            <i class="fa-solid fa-circle-check"></i>
+
+            <h2 id="solvedComplaints">6</h2>
+
+            <p>Solved</p>
+
+        </div>
+
+    </div>
+
+    <!-- Complaint Form -->
+
+    <div class="complaint-box">
+
+        <h2>Register New Complaint</h2>
+
+        <form id="complaintForm">
+
+            <input
+            type="text"
+            id="title"
+            placeholder="Complaint Title"
+            required>
+
+            <textarea
+            id="description"
+            rows="5"
+            placeholder="Describe your complaint..."
+            required></textarea>
+
+            <select id="category">
+
+                <option>Road</option>
+
+                <option>Water Supply</option>
+
+                <option>Electricity</option>
+
+                <option>Garbage</option>
+
+                <option>Street Light</option>
+
+                <option>Drainage</option>
+
+                <option>Other</option>
+
+            </select>
+
+            <input
+            type="file"
+            id="image">
+
+            <button type="submit">
+
+                Submit Complaint
+
+            </button>
+
+        </form>
+
+    </div>
+
+    <!-- Complaint History -->
+
+    <div class="history">
+
+        <h2>Complaint History</h2>
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>ID</th>
+
+                    <th>Title</th>
+
+                    <th>Category</th>
+
+                    <th>Status</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody id="historyTable">
+
+                <tr>
+
+                    <td>101</td>
+
+                    <td>Road Damage</td>
+
+                    <td>Road</td>
+
+                    <td><span class="pending">Pending</span></td>
+
+                </tr>
+
+                <tr>
+
+                    <td>102</td>
+
+                    <td>Water Leakage</td>
+
+                    <td>Water Supply</td>
+
+                    <td><span class="solved">Solved</span></td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+<script src="js/villager.js"></script>
+
+</body>
+
+</html>

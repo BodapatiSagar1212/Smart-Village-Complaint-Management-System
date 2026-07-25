@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Register | Smart Village Complaint System</title>
+
+    <link rel="stylesheet" href="css/register.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+    <!-- Navbar -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            <i class="fa-solid fa-house"></i>
+            <span>Smart Village Complaint Management System</span>
+        </div>
+
+        <div>
+
+            <a href="index.html">Home</a>
+            <a href="login.html">Login</a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- Registration Card -->
+
+    <section class="container">
+
+        <div class="register-card">
+
+            <h1>Create Account</h1>
+
+            <p>Register as Villager or Panchayat</p>
+
+
+            <!-- Tabs -->
+
+            <div class="tabs">
+
+                <button class="tab active" onclick="showVillager()">
+                    Villager
+                </button>
+
+                <button class="tab" onclick="showPanchayat()">
+                    Panchayat
+                </button>
+
+            </div>
+
+
+            <!-- Villager Form -->
+
+            <form id="villagerForm">
+
+                <div class="input-box">
+
+                    <i class="fa-solid fa-user"></i>
+
+                    <input
+                        type="text"
+                        placeholder="Full Name"
+                        required>
+
+                </div>
+
+                <div class="input-box">
+
+                    <i class="fa-solid fa-id-card"></i>
+
+                    <input
+                        type="text"
+                        placeholder="Aadhaar Number"
+                        required>
+
+                </div>
+
+                <div class="input-box">
+
+                    <i class="fa-solid fa-phone"></i>
+
+                    <input
+                        type="tel"
+                        placeholder="Phone Number"
+                        required>
+
+                </div>
+
+                <div class="input-box">
+
+                    <i class="fa-solid fa-lock"></i>
+
+                    <input
+                        type="password"
+                        placeholder="Password"
+                        required>
+
+                </div>
+
+                <button class="register-btn">
+                    Register
+                </button>
+
+            </form>
+
+
+
+            <!-- Panchayat Form -->
+
+            <form id="panchayatForm" style="display:none;">
+
+                <div class="input-box">
+
+                    <i class="fa-solid fa-building"></i>
+
+                    <input
+                        type="text"
+                        placeholder="Panchayat Name"
+                        required>
+
+                </div>
+
+                <div class="input-box">
+
+                    <i class="fa-solid fa-id-card"></i>
+
+                    <input
+                        type="text"
+                        placeholder="Panchayat ID"
+                        required>
+
+                </div>
+
+                <div class="input-box">
+
+                    <i class="fa-solid fa-envelope"></i>
+
+                    <input
+                        type="email"
+                        placeholder="Official Email"
+                        required>
+
+                </div>
+
+                <div class="input-box">
+
+                    <i class="fa-solid fa-lock"></i>
+
+                    <input
+                        type="password"
+                        placeholder="Password"
+                        required>
+
+                </div>
+
+                <button class="register-btn">
+                    Register
+                </button>
+
+            </form>
+
+
+            <div class="bottom-text">
+
+                Already have an account?
+
+                <a href="login.html">
+                    Login
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <script src="js/register.js"></script>
+
+</body>
+
+</html>

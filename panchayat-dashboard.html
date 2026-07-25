@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Panchayat Dashboard</title>
+
+    <link rel="stylesheet" href="css/dashboard.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- ================= SIDEBAR ================= -->
+
+<div class="sidebar">
+
+    <div class="logo">
+
+        <i class="fa-solid fa-building"></i>
+
+        <h2>Panchayat Panel</h2>
+
+    </div>
+
+    <ul>
+
+        <li class="active">
+            <i class="fa-solid fa-chart-line"></i>
+            Dashboard
+        </li>
+
+        <li>
+            <i class="fa-solid fa-list-check"></i>
+            Manage Complaints
+        </li>
+
+        <li>
+            <i class="fa-solid fa-users"></i>
+            Villagers
+        </li>
+
+        <li>
+            <i class="fa-solid fa-user"></i>
+            Profile
+        </li>
+
+        <li onclick="logout()">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            Logout
+        </li>
+
+    </ul>
+
+</div>
+
+<!-- ================= MAIN ================= -->
+
+<div class="main">
+
+    <!-- TOPBAR -->
+
+    <div class="topbar">
+
+        <h1>Panchayat Dashboard</h1>
+
+        <div class="profile">
+
+            <i class="fa-solid fa-user-shield"></i>
+
+            <span id="adminName">
+                Welcome Panchayat
+            </span>
+
+        </div>
+
+    </div>
+
+    <!-- Statistics -->
+
+    <div class="cards">
+
+        <div class="card blue">
+
+            <i class="fa-solid fa-file-circle-plus"></i>
+
+            <h2 id="totalComplaints">0</h2>
+
+            <p>Total Complaints</p>
+
+        </div>
+
+        <div class="card orange">
+
+            <i class="fa-solid fa-clock"></i>
+
+            <h2 id="pendingComplaints">0</h2>
+
+            <p>Pending</p>
+
+        </div>
+
+        <div class="card green">
+
+            <i class="fa-solid fa-circle-check"></i>
+
+            <h2 id="solvedComplaints">0</h2>
+
+            <p>Solved</p>
+
+        </div>
+
+    </div>
+
+    <!-- Complaint Table -->
+
+    <div class="history">
+
+        <h2>Manage Complaints</h2>
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>ID</th>
+                    <th>Title</th>
+                    <th>Category</th>
+                    <th>Status</th>
+                    <th>Action</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody id="complaintTable">
+
+                <!-- Filled using JavaScript -->
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+<script src="js/panchayat.js"></script>
+
+</body>
+
+</html>
